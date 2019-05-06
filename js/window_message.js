@@ -6,25 +6,32 @@ var txt = ['NOW we gonna talk SCIENCE',
 var speed = 50;
 
 setTimeout( function() { window_message( 0 ) }, 3000 );
-document.getElementById("window_message").innerHTML += message_prompt;
 
 function window_message(i)
 {
-  if (letter < txt[i].length)
-  {
+    if ( (letter == 0) && (i == 0) )
+    {
+        document.getElementById("window_message").innerHTML = message_prompt;
+    }
+    if (letter < txt[i].length)
+    {
      document.getElementById("window_message").innerHTML += txt[i].charAt(letter);
      letter++;
      setTimeout( function() { window_message( i ) }, speed);
-  }
-  else
-  {
+    }
+    else
+    {
+      letter = 0;
       i++;
       if (i < txt.length)
       {
-          letter = 0;
           document.getElementById("window_message").innerHTML += '<br/>';
           document.getElementById("window_message").innerHTML += message_prompt;
-          setTimeout( function() { window_message( i++ ) }, 3000);
+          setTimeout( function() { window_message( i ) }, 3000);
       }
-  }
+      else
+      {
+          setTimeout( function() { window_message( 0 ) }, 3000 );
+      }
+    }
 }

@@ -14,7 +14,7 @@
         <div class="twinkling">
         <div class="planet">
         <img src="images/window.svg" width="100%">
-        <p id="window_message"></p>
+        <p id="window_message"></p></div></div></div>
         <big><center>This site is under construction!</center></big>
     </div>
     <script type="text/javascript" src="js/window_message.js"></script>
