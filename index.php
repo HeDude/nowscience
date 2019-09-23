@@ -14,7 +14,7 @@
         <div class="twinkling">
         <div class="planet">
         <img src="images/window.svg" width="100%">
-        <a class="push_button blue" href="#">Start</a>
+        <a class="push_button blue" href="php/start.php">Start</a>
         <p id="window_message"></p>
     </div>
     <script type="text/javascript" src="js/window_message.js"></script>
